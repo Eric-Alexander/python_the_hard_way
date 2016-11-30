@@ -1,0 +1,96 @@
+This list is an amalgamation of what I have learned with Python thus far
+ala Learn Python the Hard Way by Zed A. Shaw
+
+
+variable = 1
+In python, a variable declaration is formatted in such a way that is listed above.
+One the left side, one 'declares' the name of the variable (in alphanumeric string format) followed by an '=' sign. On the right side of this equation one can set the variable as pretty much anything; a datatype, function or method, object etc...
+
+print
+This is a command that tells Python to output to the console whatever succeeds the 'print' statement. Generally, a user would not interact with this command. Instead, it is a valuable tool for programmers to see what happens with a particular set of instructions.
+
+%s
+This is a Python formatter. In this case it is a variable substitution for a string.
+
+%r
+A Python formatter that acts as a variable to output the literal python substitute. This Formatter should only be used for debugging or using as a tool to clarify what type of data is being passed. The user should never interact with %r format.
+
+%d
+A Python formatter for integer substitution. A good tool for combining yet-to-be-known integers to perform numeric calculations.
+
+age = 6; fu = "bar"; string_literal = "This is a string"
+print "Age: %d. String: %s. Literal: %r" % (age, fu, string_literal)
+>>> Age: 6. String: bar. Literal: 'This is a string'
+Above is an example of using Python formatters, respectively. '>>>' indicates console output.
+
+a = "Left side . . . "; b = " . . . right side"; c = '666'; d = 777
+print a + b
+>>> Left side . . .  . . . right side
+print c + d
+>>> 666777
+It is easy to concatenate strings in python.
+
+print x, y, z
+The commas in a 'print' statement will output a space on the console.
+
+fubar = "%r %r %r %r"
+print fubar % (6, 7, 8, 9)
+print fubar % ("six", "seven", "eight", "nine")
+>>> 6 7 8 9
+>>> 'six' 'seven' 'eight' 'nine'
+
+\n
+this tells the python interpreter to output whatever succeeds the '\n' statement on a new line
+
+\t
+Python interpreter will tab
+
+\\
+Python interpreter will output a single backslash '\'
+
+\v
+This will print a vertical tab: outputs a new line and tabs over once from previous line.
+
+\r
+This stands for a carriage-return, meaning, whatever succeeds the '\r' will replaced the characters at the front. EX: print "Hell\ro" >>> oell
+
+raw_input()
+This is a built-in python command that will prompt the user for input.
+
+raw_input("What is your Name? ")
+The same as previous except with a explicit prompt. After user submits data and hits the RETURN key both the prompt and the answer will be displayed on the console.
+
+script
+Another name for a .py module or file
+
+argv
+Argument Variable. This is a built-in Python variable 'holder'
+
+from *module* import *object*
+This is a statement that belongs on the top of the script. It allows one to access various python modules and let's other programmers know what other scripts you are using.
+
+from sys import argv
+script, first, second = argv
+We are setting the 'script', 'first' and 'second' variables to be held by the Argument Variable 'argv'. When one wants to execute a script when assigning variables to the Argument Variable one MUST decalse them on the command line. Ex >>python script.py BECOMES >> python script.py 1st_arugment 2nd_argument
+
+open()
+This is a function that takes at least one argument, usually the name of a file. A second optional argument will either be 'r' for read (which is done by default so one does does need to include it in the list of arguments in the open() function or 'w' for write which will open the file insomuch as allowing the programmer to write in additional content.
+
+read()
+Operating an open file. This function will display the contents of an open(file) onto the console.
+EX: txt_file = open(filename); txt_file.read()
+
+write()
+Operating an openfile. This function will overwrite the selected file with whatever argument is given to it. Ex: txt_file = open(file) ; txt_file.write("Overwrite file with this")
+
+close()
+Operating an open file. This closes the selected open file, script or module. It is always good practice to close() a file when you are done using it.
+
+*args
+This is similar to Argument Variable 'argv' but for functions. The key differences are that when one calls def function(*args) any number of arguments can be placed into the function. This is good when you, as the programmer, don't know how many arguments will be put into the function. However, it is always best to explicitly state the number of arguments whenever possible to be more terse. Ex: def function(arg1, arg2, arg3)
+
+seek()
+Operating an open file. This function takes a integer argument that corresponds to the byte index.
+
+readline()
+Operating an open file. This will printout to the console, byte by byte, the contents of a selected line until there is a \n
