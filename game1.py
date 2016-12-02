@@ -14,7 +14,7 @@ class Engine(object):
 
     def play(self):
         current_scene = self.scene_map.opening_scene()
-        last_scene = self.scene_map.next_scene('finished.')
+        last_scene = self.scene_map.next_scene('finished')
 
         while current_scene != last_scene:
             next_scene_name = current_scene.enter()
@@ -43,20 +43,20 @@ class CentralCorridor(Scene):
 
         action = raw_input(" >> ")
 
-        if "shoot" in action:
+        if action == "shoot":
             print """
                 You unsling your Rayeon blaster from your
                 hip intuitively and aim for his chest. But as you pull the trigger the Ooblekian warps space-time itself as to dodge the plasma blast for your Rayeon blaster and rebuttals with a slough of Zoorbleg pellets that riddle your body and drop you to the floor!
 
             """
             return 'death'
-        elif "dodge" or "run" or "evade" in action:
+        elif action == "run":
             print """
                 Channeling Neo from 'The Matrix' movie put on for Video Night in the rec room last week you, seemingly, manipulate space-time and bend around every single Zoorblerg pellet the Ooblekian shoots at you! When his clip empties you return to a natural position to balance yourself. But, as you do this your foot catches on one of the Zoorblerg cartridges and you slip and fall! The time is opportune for the Ooblekian as he slithers up to you, wraps his tenacle around your nack and slowly squeezes your conscienceness into oblivion.
             """
             return 'death'
 
-        elif "insult" in action:
+        elif action == "insult":
             print """
             Having studied at the prestigious Counter Measure Academy for Hostile Creatures you know that an Ooblekians biggest weakness is insulting its' hive mother in its' native tongue. You begin to shout the insult as such: 'OPWEJF FII FSD GJWOIGJ IRJG ERIGJ GJIERJS FJIJFS De!!!!!!!' The visualization of such an insult to its' hive mother is too unbearable to realize and self-administers a salt capsule thereby bubbling and melting its' wiggly course into a pile of oozey muck. Yay! You now progress past the gelatinous and enter the Weapons Armory
 
