@@ -74,7 +74,7 @@ script, first, second = argv
 We are setting the 'script', 'first' and 'second' variables to be held by the Argument Variable 'argv'. When one wants to execute a script when assigning variables to the Argument Variable one MUST decalse them on the command line. Ex >>python script.py BECOMES >> python script.py 1st_arugment 2nd_argument
 
 open()
-This is a function that takes at least one argument, usually the name of a file. A second optional argument will either be 'r' for read (which is done by default so one does does need to include it in the list of arguments in the open() function or 'w' for write which will open the file insomuch as allowing the programmer to write in additional content.
+This is a function that takes at least one argument, usually the name of a file. A second optional argument will either be 'r' for read (which is done by default so one does does need to include it in the list of arguments in the open() function or 'w' for write which will open the file insomuch as allowing the programmer to overwrite original content.
 
 read()
 Operating an open file. This function will display the contents of an open(file) onto the console.
